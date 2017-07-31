@@ -16,10 +16,11 @@ package al
 // Check information available at openal.org.
 
 // #cgo darwin  LDFLAGS: -framework OpenAL
-// #cgo linux   LDFLAGS: -lopenal -ldl
+// #cgo linux   LDFLAGS: -std=c99 -lopenal -ldl
 // #cgo windows LDFLAGS: -lOpenAL32
 //
 // #include <stdlib.h>
+// #include <stdint.h>
 // #if defined(__APPLE__)
 // #include <dlfcn.h>
 // #elif defined(_WIN32)
